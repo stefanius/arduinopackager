@@ -1,0 +1,9 @@
+
+#Read a packagefile into an array
+
+readPackageFile()
+{
+	packageFileName=$1
+	IFS=$'\r\n' packageFile=($(cat $packageFileName))
+	echo "$packageFile"
+}
